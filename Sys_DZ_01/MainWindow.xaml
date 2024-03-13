@@ -1,0 +1,31 @@
+﻿<Window x:Class="Sys_DZ_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sys_DZ_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0">
+            <DataGrid x:Name="datagrid" Height="435" FontSize="16" Foreground="black" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                    <DataGridTextColumn Header="Process Name" Binding="{Binding ProcessName}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1">
+            <TextBox Name="app_tb" Margin="0,20,0,0" Height="50" FontSize="25" TextAlignment="Left" VerticalContentAlignment="Center"></TextBox>
+            <Button Margin="0,20,0,0" Height="30" Background="green" Content="Confirm" FontSize="16" Foreground="white" Click="Confirm_click"></Button>
+            <Button Margin="0,20,0,0" Height="30" Background="Red" Content="Close" FontSize="16" Foreground="white" Click="Close_click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
